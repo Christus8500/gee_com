@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gee_com/pages/home_page.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -59,11 +60,15 @@ class WelcomePage extends StatelessWidget {
                 ),
                 child: Center(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (context) {
+                        return const HomePage();
+                      }));
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.black,
                       fixedSize: const Size(150, 60),
-                      
                     ),
                     child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
