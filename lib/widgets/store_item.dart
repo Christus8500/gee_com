@@ -2,7 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 class StoreItem extends StatelessWidget {
-  const StoreItem({super.key});
+  const StoreItem(
+      {super.key,
+      required this.title,
+      required this.description,
+      required this.price,
+      required this.rating,
+      required this.imageUrl});
+  final String title;
+  final String description;
+  final String price;
+  final String rating;
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -22,25 +33,32 @@ class StoreItem extends StatelessWidget {
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.greenAccent,
                 ),
+                child: Image.network(imageUrl),
               ),
               const Gap(20),
-              const Text(
-                'Product Name',
-                style: TextStyle(
-                  fontSize: 18,
+              Text(
+                title,
+                style: const TextStyle(
+                  fontSize: 15,
                   fontWeight: FontWeight.bold,
+                ),
+              ),
+              const Gap(8),
+              Text(
+                description,
+                style: const TextStyle(
+                  fontSize: 12,
                 ),
               ),
               const Gap(12),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
-                    '\$449',
-                    style: TextStyle(
-                      fontSize: 18,
+                  Text(
+                    price,
+                    style: const TextStyle(
+                      fontSize: 15,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
