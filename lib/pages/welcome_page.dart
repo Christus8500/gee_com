@@ -17,9 +17,9 @@ class WelcomePage extends StatelessWidget {
               width: 300,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                color: Colors.black87,
+                color: Colors.redAccent,
                 border: const BorderDirectional(
-                  start: BorderSide(color: Colors.redAccent, width: 10),
+                  start: BorderSide(color: Colors.black, width: 10),
                 ),
               ),
               child: const Center(
@@ -28,7 +28,7 @@ class WelcomePage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
-                    color: Colors.redAccent,
+                    color: Colors.black,
                   ),
                 ),
               ),
@@ -76,7 +76,7 @@ class WelcomePage extends StatelessWidget {
                         Text(
                           'Continue',
                           style: TextStyle(
-                            color: Colors.redAccent,
+                            color: Colors.white,
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
@@ -84,7 +84,7 @@ class WelcomePage extends StatelessWidget {
                         SizedBox(width: 8),
                         Icon(
                           Icons.arrow_circle_right_outlined,
-                          color: Colors.redAccent,
+                          color: Colors.white,
                           size: 25,
                         ),
                       ],
