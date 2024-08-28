@@ -21,7 +21,7 @@ class StoreItem extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
       child: Container(
         decoration: BoxDecoration(
-            border: Border.all(width: 3),
+            border: Border.all(width: 3, color: Colors.redAccent),
             borderRadius: BorderRadius.circular(12)),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -75,7 +75,7 @@ class StoreItem extends StatelessWidget {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                    color: Colors.black,
+                    color: Colors.redAccent,
                   ),
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
